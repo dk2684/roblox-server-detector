@@ -2,8 +2,9 @@ HttpService = game:GetService("HttpService")
 local PlayerService = game:GetService("Players")
 
 local longitude = HttpService:JSONDecode(HttpService:GetAsync('http://ip-api.com/json/')).lon
-local GUI = game:GetService("StarterGui")
 
+-- Starter GUI > Server Identifier (ScreenGUI) > ServerRegion (TextLabel)
+local GUI = game:GetService("StarterGui")
 local region = GUI.ServerIdentifier.ServerRegion
 
 region.Text = "Server: Unavailable"
